@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SivaSekar P | Portfolio</title>
+    <meta name="description" content="Professional portfolio of SivaSekar P showcasing skills, projects, achievements, and CTF participations.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    <div class="bg-shape shape-3"></div>
+
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="#" class="logo">Siva<span>Sekar</span></a>
+            
+            <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#achievements" class="nav-link">Achievements</a>
+                <a href="#ctf" class="nav-link">CTF</a>
+                <a href="#certifications" class="nav-link">Certifications</a>
+                <a href="#internships" class="nav-link">Internships</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero section">
+            <div class="hero-content fade-in">
+                <p class="greeting">Welcome to my portfolio! I'm</p>
+                <h1 class="glitch" data-text="SivaSekar P">SivaSekar P</h1>
+                <h2 class="role">Final Year B.Tech IT Student</h2>
+                <p class="hero-desc">Passionate about Web Development, Cybersecurity, and Problem-Solving. Thriving in fast-paced and challenging environments.</p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">Let's Connect</a>
+                    <a href="SivaSekar P Resume.pdf" target="_blank" class="btn btn-outline">Download Resume</a>
+                </div>
+                <div class="social-links mt-4">
+                    <a href="https://github.com/P-SivaSekar" class="social-icon" target="_blank"><img src="github.png" alt="GitHub"></a>
+                    <a href="https://linkedin.com/in/sivasekar-p-170167362" class="social-icon" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a>
+                    <a href="https://www.instagram.com/_sivasekar_22_" class="social-icon" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+                </div>
+            </div>
+            <div class="hero-image fade-in delay-2">
+                <div class="image-wrapper">
+                    <img src="profile_image.jpg" alt="SivaSekar P" class="profile-pic">
+                    <div class="ring-1"></div>
+                    <div class="ring-2"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="about section">
+            <h2 class="section-title fade-in">About <span>Me</span></h2>
+            <div class="about-content fade-in">
+                <div class="glass-card about-card" style="text-align: left;">
+                    <p>I'm P SivaSekar, a Final year B.Tech Information Technology student with a strong passion for <strong>Web Development, Cybersecurity, and Problem-Solving</strong>. With hands-on experience in building full-stack applications using the MERN stack and participating in <strong>National-level Capture The Flag (CTF) Competitions</strong>, I thrive in fast-paced and challenging environments.</p>
+                    <br>
+                    <p>My journey has been shaped by a blend of <strong>Academic projects and Real-World Internships</strong>. I enjoy developing scalable, user-friendly applications and exploring ethical hacking techniques to improve digital security. Beyond coding, I am an active Handball and Cricket player, which has strengthened my teamwork, strategy, and discipline.</p>
+                    <br>
+                    <p>I am constantly looking to expand my skill set, embrace emerging technologies, and contribute to impactful projects that make a real difference.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills section">
+            <h2 class="section-title fade-in">My <span>Skills</span></h2>
+            <div class="skills-grid">
+                <div class="skill-card glass-card fade-in">
+                    <img src="https://img.icons8.com/color/80/python--v1.png" alt="Python" class="skill-img">
+                    <h3>Python</h3>
+                </div>
+                <div class="skill-card glass-card fade-in delay-1">
+                    <img src="https://img.icons8.com/color/80/java-coffee-cup-logo--v1.png" alt="Java" class="skill-img">
+                    <h3>Java</h3>
+                </div>
+                <div class="skill-card glass-card fade-in delay-2">
+                    <img src="https://img.icons8.com/color/80/mysql-logo.png" alt="MySQL" class="skill-img">
+                    <h3>MySQL</h3>
+                </div>
+                <div class="skill-card glass-card fade-in delay-3">
+                    <img src="https://img.icons8.com/color/80/html-5--v1.png" alt="HTML" class="skill-img">
+                    <h3>HTML</h3>
+                </div>
+                <div class="skill-card glass-card fade-in delay-1">
+                    <img src="https://img.icons8.com/color/80/css3.png" alt="CSS" class="skill-img">
+                    <h3>CSS</h3>
+                </div>
+                <div class="skill-card glass-card fade-in delay-2">
+                    <img src="https://img.icons8.com/color/80/javascript--v1.png" alt="JavaScript" class="skill-img">
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="skill-card glass-card fade-in delay-3">
+                    <img src="https://img.icons8.com/officel/80/react.png" alt="React" class="skill-img">
+                    <h3>React</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="education section">
+            <h2 class="section-title fade-in"><span>Education</span></h2>
+            <div class="timeline fade-in">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <img src="rit.jpg" alt="College" class="timeline-img">
+                        <h3>Ramco Institute Of Technology</h3>
+                        <p class="timeline-date">B.Tech - Information Technology (2022-2026)</p>
+                        <p>CGPA: 8.15</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <img src="school.jpg" alt="School" class="timeline-img">
+                        <h3>Shree Swami Vivekananda Matriculation Higher Secondary School</h3>
+                        <p class="timeline-date">HSC (2022)</p>
+                        <p>Score: 80.6%</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <img src="school.jpg" alt="School" class="timeline-img">
+                        <h3>Shree Swami Vivekananda Matriculation Higher Secondary School</h3>
+                        <p class="timeline-date">SSLC (2020)</p>
+                        <p>Score: 94.2%</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="achievements section">
+            <h2 class="section-title fade-in"><span>Achievements</span></h2>
+            <div class="gallery-grid fade-in">
+                <div class="gallery-item glass-card hover-lift">
+                    <img src="pecan.jpg" alt="PECAN+ CTF'24">
+                    <div class="gallery-overlay">
+                        <h3>PECAN+ CTF'24 FINALIST</h3>
+                        <p>Cleared the preliminary round as Top 40 team and attended the prestigious Pecan+ CTF Finals at IIT Madras Research Park conducted by Edith Cowen University, Australia in partnership with IITM PALS.</p>
+                    </div>
+                </div>
+                <div class="gallery-item glass-card hover-lift">
+                    <img src="ctfquest.jpg" alt="CTF Quest">
+                    <div class="gallery-overlay">
+                        <h3>Top 5 in Thiran CTF Quest'25</h3>
+                        <p>Cleared the preliminary round by getting in Top 10 teams and secured Top 5 in the Finals at Shri Eshwar College of Engineering by matching scores with the 3rd team to get 4th place.</p>
+                    </div>
+                </div>
+                <div class="gallery-item glass-card hover-lift">
+                    <img src="codetoggle.jpg" alt="Code Toggle">
+                    <div class="gallery-overlay">
+                        <h3>Top 3 in Code Toggle</h3>
+                        <p>Attended an on-spot coding challenge with my friend and secured Top 3, winning Rs:1000 cash prize at Shri Eshwar College of Engineering.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTF Participations Section -->
+        <section id="ctf" class="ctf section">
+            <h2 class="section-title fade-in">CTF <span>Participations</span></h2>
+            <div class="gallery-grid fade-in">
+                <div class="gallery-item glass-card hover-lift">
+                    <img src="apoorv25.jpg" alt="Apoorv CTF 2025">
+                    <div class="gallery-overlay">
+                        <h3>Apoorv CTF 2025</h3>
+                        <p>by IIIT Kottayam (Top 100)</p>
+                    </div>
+                </div>
+                <div class="gallery-item glass-card hover-lift">
+                    <img src="apporv24.jpg" alt="Apoorv CTF 2024">
+                    <div class="gallery-overlay">
+                        <h3>Apoorv CTF 2024</h3>
+                        <p>by IIIT Kottayam (Top 65)</p>
+                    </div>
+                </div>
+                <div class="gallery-item glass-card hover-lift">
+                    <img src="H7CTF.jpg" alt="H7 CTF">
+                    <div class="gallery-overlay">
+                        <h3>H7 CTF</h3>
+                        <p>An International CTF</p>
+                    </div>
+                </div>
+                <div class="gallery-item glass-card hover-lift">
+                    <img src="wwctf24.png" alt="World Wide CTF 2024">
+                    <div class="gallery-overlay">
+                        <h3>World Wide CTF 2024</h3>
+                        <p>A jeopardy-style competition</p>
+                    </div>
+                </div>
+                <div class="gallery-item glass-card hover-lift">
+                    <img src="yukthi.jpg" alt="Yukthi CTF 2024">
+                    <div class="gallery-overlay">
+                        <h3>Yukthi CTF 2024</h3>
+                        <p>by TamilNadu Police Department</p>
+                    </div>
+                </div>
+                <div class="gallery-item glass-card hover-lift">
+                    <img src="HackQuest.jpg" alt="HACKQUEST 2K25">
+                    <div class="gallery-overlay">
+                        <h3>HACKQUEST 2K25</h3>
+                        <p>Top 150 among 500+ teams</p>
+                    </div>
+                </div>
+                <div class="gallery-item glass-card hover-lift">
+                    <img src="Codefest.jpg" alt="CODEFEST'25">
+                    <div class="gallery-overlay">
+                        <h3>CODEFEST'25</h3>
+                        <p>by IIT Banaras</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="certifications section">
+            <h2 class="section-title fade-in"><span>Certifications</span></h2>
+            <div class="grid-2 fade-in">
+                <div class="glass-card feature-card horizontal">
+                    <img src="java.jpg" alt="Java" class="feature-img-small">
+                    <div class="feature-info">
+                        <h3>Programming in Java</h3>
+                        <p>Cleared exam by NPTEL with ELITE certification.</p>
+                    </div>
+                </div>
+                <div class="glass-card feature-card horizontal">
+                    <img src="cloud.jpg" alt="Cloud Computing" class="feature-img-small">
+                    <div class="feature-info">
+                        <h3>Cloud Computing</h3>
+                        <p>Cleared exam by NPTEL with ELITE certification.</p>
+                    </div>
+                </div>
+                <div class="glass-card feature-card horizontal">
+                    <img src="c.jpg" alt="C Programming" class="feature-img-small">
+                    <div class="feature-info">
+                        <h3>Programming in C</h3>
+                        <p>Cleared "Problem solving through Programming in C" exam by NPTEL.</p>
+                    </div>
+                </div>
+                <div class="glass-card feature-card horizontal">
+                    <img src="Azure.jpg" alt="Azure" class="feature-img-small">
+                    <div class="feature-info">
+                        <h3>Microsoft Azure AI Engineer Associate</h3>
+                        <p>Completed course by ICT Academy.</p>
+                    </div>
+                </div>
+                <div class="glass-card feature-card horizontal">
+                    <img src="Wipro.jpg" alt="Wipro" class="feature-img-small">
+                    <div class="feature-info">
+                        <h3>Java Full Stack</h3>
+                        <p>Obtained certification from Wipro.</p>
+                    </div>
+                </div>
+                <div class="glass-card feature-card horizontal">
+                    <img src="LOR.jpg" alt="LOR" class="feature-img-small">
+                    <div class="feature-info">
+                        <h3>Letter of Recommendation</h3>
+                        <p>Received from Supraja Technologies.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Internships Section -->
+        <section id="internships" class="internships section">
+            <h2 class="section-title fade-in"><span>Internships</span></h2>
+            <div class="grid-2 fade-in">
+                
+                <div class="glass-card feature-card">
+                    <img src="Supraja.jpg" alt="Supraja Technologies" class="feature-img">
+                    <div class="feature-info">
+                        <h3>Supraja Technologies, Vijayawada</h3>
+                        <p class="subtitle">Web App VAPT Intern (Jul 2025 – Oct 2025)</p>
+                        <p>Hands-on experience in Web App Vulnerability Assessment & Pentesting. Developed a tool addressing weak passwords via password cracking using Wordlists and Rainbow tables.</p>
+                    </div>
+                </div>
+                
+                <div class="glass-card feature-card">
+                    <img src="vibathi.jpg" alt="Vibhathi Labs" class="feature-img">
+                    <div class="feature-info">
+                        <h3>Vibhathi Labs, Chennai</h3>
+                        <p class="subtitle">Intern – Oracle APEX Fundamentals (Mar 2025)</p>
+                        <p>Gained foundational understanding of Oracle APEX for web app development, database integration, building interactive forms, and applying project workflows.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card feature-card">
+                    <img src="shadowfox.jpg" alt="Shadowfox" class="feature-img">
+                    <div class="feature-info">
+                        <h3>ShadowFox (Virtual)</h3>
+                        <p class="subtitle">Cybersecurity Intern (Sep 2024)</p>
+                        <p>Conducted pentesting tasks (Nmap, Dirb, Wireshark). Decrypted hash-encoded passwords to unlock VeraCrypt files, located entry points via PE Explorer, and created reverse shells using Metasploit.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card feature-card">
+                    <img src="jupiter.jpg" alt="Jupiter Brothers" class="feature-img">
+                    <div class="feature-info">
+                        <h3>Jupiter Brothers, Maraneri</h3>
+                        <p class="subtitle">Intern - Data Science (3 Months)</p>
+                        <p>Conducted real-time data analysis, developed predictive models, and built visualizations using Python, SQL, and Matplotlib/Seaborn to improve forecasting accuracy.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+            <h2 class="section-title fade-in">Get In <span>Touch</span></h2>
+            <div class="contact-container fade-in">
+                <div class="contact-info glass-card">
+                    <h3>Let's talk about everything!</h3>
+                    <p>Feel free to reach out for collaborations, CTF teaming, or just to say hi.</p>
+                    <div class="contact-methods">
+                        <div class="method">
+                            <span class="icon">📧</span>
+                            <p>psivasekar22@gmail.com</p>
+                        </div>
+                        <div class="method">
+                            <span class="icon">📍</span>
+                            <p>India</p>
+                        </div>
+                    </div>
+                    <div class="social-links mt-4">
+                        <a href="https://github.com/P-SivaSekar" class="social-icon" target="_blank"><img src="github.png" alt="GitHub"></a>
+                        <a href="https://linkedin.com/in/sivasekar-p-170167362" class="social-icon" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a>
+                    </div>
+                </div>
+                <form class="contact-form glass-card" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" name="from_name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="from_email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                    <p id="form-status" style="margin-top:10px; font-weight:bold; text-align:center;"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Email: psivasekar22@gmail.com</p>
+        <p>&copy; <span id="year"></span> SivaSekar P | All Rights Reserved</p>
+    </footer>
+
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("m9whkxkToVNlFXQr9");
+        })();
+    </script>
+    
+    <script src="main.js"></script>
+    <script>
+        // Email JS Contact Form Integration
+        document.getElementById("contact-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const status = document.getElementById("form-status");
+            status.textContent = "Sending...";
+            status.style.color = "var(--text-color)";
+
+            emailjs.sendForm("service_6307jwb", "template_6g1q2ch", this)
+                .then(() => {
+                    status.style.color = "#10b981"; // success green
+                    status.textContent = "Message sent successfully!";
+                    this.reset();
+                }, (error) => {
+                    status.style.color = "#ef4444"; // error red
+                    status.textContent = "Failed to send. Please try again.";
+                    console.error("EmailJS Error:", error);
+                });
+        });
+    </script>
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+</body>
+</html>
