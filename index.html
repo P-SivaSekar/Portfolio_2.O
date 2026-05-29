@@ -356,19 +356,6 @@
                         <a href="https://linkedin.com/in/sivasekar-p-170167362" class="social-icon" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a>
                     </div>
                 </div>
-                <form class="contact-form glass-card" id="contact-form">
-                    <div class="form-group">
-                        <input type="text" name="from_name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="from_email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary w-100">Send Message</button>
-                    <p id="form-status" style="margin-top:10px; font-weight:bold; text-align:center;"></p>
-                </form>
             </div>
         </section>
     </main>
@@ -378,36 +365,7 @@
         <p>&copy; <span id="year"></span> SivaSekar P | All Rights Reserved</p>
     </footer>
 
-    <!-- EmailJS SDK -->
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script>
-        (function () {
-            emailjs.init("m9whkxkToVNlFXQr9");
-        })();
-    </script>
-    
     <script src="main.js"></script>
-    <script>
-        // Email JS Contact Form Integration
-        document.getElementById("contact-form").addEventListener("submit", function (event) {
-            event.preventDefault();
-
-            const status = document.getElementById("form-status");
-            status.textContent = "Sending...";
-            status.style.color = "var(--text-color)";
-
-            emailjs.sendForm("service_6307jwb", "template_6g1q2ch", this)
-                .then(() => {
-                    status.style.color = "#10b981"; // success green
-                    status.textContent = "Message sent successfully!";
-                    this.reset();
-                }, (error) => {
-                    status.style.color = "#ef4444"; // error red
-                    status.textContent = "Failed to send. Please try again.";
-                    console.error("EmailJS Error:", error);
-                });
-        });
-    </script>
     <!-- Lightbox Modal -->
     <div id="lightbox" class="lightbox">
         <span class="lightbox-close">&times;</span>
