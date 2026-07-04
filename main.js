@@ -106,4 +106,55 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // --- Download Button Animation ---
+    const downloadBtns = document.querySelectorAll('.btn-download-source, .btn-download-nosource');
+    
+    downloadBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            if (btn.classList.contains('downloading')) return;
+            
+            const originalHtml = btn.innerHTML;
+            const downloadUrl = btn.getAttribute('href');
+            
+            btn.classList.add('downloading');
+            btn.style.pointerEvents = 'none';
+            
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += 5;
+                if (progress <= 100) {
+                    btn.innerHTML = `
+                        <div class="download-progress-bar" style="width: ${progress}%"></div>
+                        <span class="download-text">Downloading... ${progress}%</span>
+                    `;
+                } else {
+                    clearInterval(interval);
+                    btn.innerHTML = `
+                        <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px; vertical-align: middle;">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span>Completed!</span>
+                    `;
+                    
+                    // Trigger actual file download
+                    const tempLink = document.createElement('a');
+                    tempLink.href = downloadUrl;
+                    tempLink.setAttribute('download', '');
+                    document.body.appendChild(tempLink);
+                    tempLink.click();
+                    document.body.removeChild(tempLink);
+                    
+                    // Reset button after a delay
+                    setTimeout(() => {
+                        btn.innerHTML = originalHtml;
+                        btn.classList.remove('downloading');
+                        btn.style.pointerEvents = 'auto';
+                    }, 3000);
+                }
+            }, 100);
+        });
+    });
 });
