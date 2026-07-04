@@ -461,6 +461,10 @@ img { max-width: 100%; height: auto; display: block; }
     width: 100%;
 }
 
+.deck-card + .deck-card {
+    margin-top: 3rem;
+}
+
 .card-glow {
     position: absolute;
     top: -50%;
