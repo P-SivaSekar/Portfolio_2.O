@@ -888,8 +888,8 @@ img { max-width: 100%; height: auto; display: block; }
 
 .mini-ig { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%); }
 .mini-yt { background: #ff0000; }
-.mini-ff { background: linear-gradient(135deg, #ff5722, #ff9800); }
-.mini-bgmi { background: linear-gradient(135deg, #2e7d32, #1b5e20); }
+.mini-snapchat { background: #fffc00; }
+.mini-spotify { background: #1ed760; }
 
 .device-home-bar {
     width: 70px;
