@@ -1018,3 +1018,8 @@ img { max-width: 100%; height: auto; display: block; }
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+.music-util-btn:hover {
+    opacity: 1 !important;
+    color: var(--secondary);
+}
