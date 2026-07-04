@@ -11,6 +11,15 @@
     --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     --nav-bg: rgba(15, 23, 42, 0.8);
     --card-hover: rgba(255, 255, 255, 0.05);
+
+    /* Device Mockup Variables (Dark Theme) */
+    --device-bg: #090d16;
+    --device-border: #1e293b;
+    --device-screen-bg: #0b0f19;
+    --device-text: #f8fafc;
+    --device-text-muted: #94a3b8;
+    --device-info-bg: rgba(255, 255, 255, 0.03);
+    --device-info-border: rgba(255, 255, 255, 0.05);
 }
 
 [data-theme="light"] {
@@ -25,6 +34,15 @@
     --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
     --nav-bg: rgba(248, 250, 252, 0.8);
     --card-hover: rgba(0, 0, 0, 0.03);
+
+    /* Device Mockup Variables (Light Theme) */
+    --device-bg: #ffffff;
+    --device-border: #cbd5e1;
+    --device-screen-bg: #f1f5f9;
+    --device-text: #0f172a;
+    --device-text-muted: #475569;
+    --device-info-bg: rgba(0, 0, 0, 0.03);
+    --device-info-border: rgba(0, 0, 0, 0.05);
 }
 
 * {
@@ -356,22 +374,37 @@ img { max-width: 100%; height: auto; display: block; }
 .gallery-overlay h3 { margin-bottom: 0.5rem; }
 .gallery-overlay p { font-size: 0.9rem; line-height: 1.3; margin: 0; }
 
-/* ==========================================================================
-   Projects Section - Futuristic Control Deck Design
-   ========================================================================== */
+#projects {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 5%;
+    box-sizing: border-box;
+}
+
+@media (min-width: 992px) {
+    #projects {
+        height: calc(100vh - 80px);
+        overflow: hidden;
+    }
+}
+
 .project-deck {
     max-width: 1200px;
     margin: 0 auto;
+    width: 100%;
 }
 
 .deck-card {
     position: relative;
-    padding: 3.5rem;
+    padding: 2rem 3rem;
     overflow: hidden;
     border-radius: 24px;
     border: 1px solid var(--glass-border);
     background: var(--glass-bg);
     box-shadow: var(--glass-shadow);
+    width: 100%;
 }
 
 .card-glow {
@@ -380,15 +413,15 @@ img { max-width: 100%; height: auto; display: block; }
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 60%);
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.06) 0%, transparent 60%);
     pointer-events: none;
     z-index: 0;
 }
 
 .deck-grid {
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 4rem;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 3rem;
     align-items: center;
     position: relative;
     z-index: 1;
@@ -397,7 +430,7 @@ img { max-width: 100%; height: auto; display: block; }
 @media (max-width: 992px) {
     .deck-grid {
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 2rem;
     }
 }
 
@@ -408,67 +441,67 @@ img { max-width: 100%; height: auto; display: block; }
 .tech-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.6rem;
-    margin-bottom: 1.5rem;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .tech-tags .tag {
     background: rgba(59, 130, 246, 0.1);
     color: var(--primary);
-    padding: 6px 14px;
+    padding: 4px 12px;
     border-radius: 20px;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: 600;
     border: 1px solid rgba(59, 130, 246, 0.2);
     letter-spacing: 0.5px;
 }
 
 .deck-title {
-    font-size: 2.8rem;
+    font-size: 2.4rem;
     font-weight: 800;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     background: linear-gradient(135deg, var(--text-color) 30%, var(--text-muted) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .deck-desc {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    margin-bottom: 2rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
     color: var(--text-muted);
 }
 
 .features-list {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    margin-bottom: 2.5rem;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .feature-item {
     display: flex;
-    gap: 1rem;
+    gap: 0.75rem;
     align-items: flex-start;
 }
 
 .feature-icon {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     background: rgba(255, 255, 255, 0.05);
-    padding: 10px;
-    border-radius: 12px;
+    padding: 8px;
+    border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .feature-item h4 {
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     font-weight: 600;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.1rem;
     color: var(--text-color);
 }
 
 .feature-item p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--text-muted);
     margin: 0;
 }
@@ -476,20 +509,28 @@ img { max-width: 100%; height: auto; display: block; }
 .deck-actions {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 0.75rem;
 }
 
 .btn-interactive {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 12px 24px;
+    padding: 10px 20px;
     border-radius: 25px;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.deck-note {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 1rem;
+    font-style: italic;
+    opacity: 0.8;
 }
 
 /* Downloading State */
@@ -520,7 +561,7 @@ img { max-width: 100%; height: auto; display: block; }
     font-weight: 600;
 }
 
-/* Right Pane: Premium Phone Device Mockup */
+/* Right Pane: Premium Phone Device Mockup (Theme-Adaptive) */
 .deck-visual {
     display: flex;
     justify-content: center;
@@ -529,8 +570,8 @@ img { max-width: 100%; height: auto; display: block; }
 
 .device-container {
     position: relative;
-    width: 270px;
-    height: 520px;
+    width: 230px;
+    height: 450px;
 }
 
 .device-glow {
@@ -539,7 +580,7 @@ img { max-width: 100%; height: auto; display: block; }
     left: -20px;
     right: -20px;
     bottom: -20px;
-    background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.12) 0%, transparent 70%);
     pointer-events: none;
     filter: blur(10px);
 }
@@ -547,63 +588,68 @@ img { max-width: 100%; height: auto; display: block; }
 .device-body {
     width: 100%;
     height: 100%;
-    background: #090d16;
-    border: 10px solid #1e293b;
-    border-radius: 44px;
+    background: var(--device-bg);
+    border: 8px solid var(--device-border);
+    border-radius: 40px;
     position: relative;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6), inset 0 0 15px rgba(255, 255, 255, 0.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(255, 255, 255, 0.05);
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    transition: background-color 0.4s ease, border-color 0.4s ease;
 }
 
 .device-sensor {
-    width: 8px;
-    height: 8px;
-    background: #1e293b;
+    width: 6px;
+    height: 6px;
+    background: var(--device-border);
     border-radius: 50%;
     position: absolute;
-    top: 12px;
+    top: 10px;
     left: 35%;
     z-index: 20;
+    transition: background-color 0.4s ease;
 }
 
 .device-speaker {
-    width: 60px;
+    width: 50px;
     height: 4px;
-    background: #1e293b;
+    background: var(--device-border);
     border-radius: 2px;
     position: absolute;
-    top: 14px;
+    top: 11px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 20;
+    transition: background-color 0.4s ease;
 }
 
 .device-screen {
     width: 100%;
     height: calc(100% - 15px);
     margin-top: 15px;
-    background: #0b0f19;
-    border-radius: 30px 30px 0 0;
+    background: var(--device-screen-bg);
+    border-radius: 24px 24px 0 0;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    padding: 10px 16px 20px;
+    padding: 8px 12px 15px;
     position: relative;
+    transition: background-color 0.4s ease;
 }
 
 .device-status-bar {
     display: flex;
     justify-content: space-between;
-    font-size: 0.7rem;
-    color: #475569;
+    font-size: 0.65rem;
+    color: var(--device-text-muted);
     font-weight: 600;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
+    transition: color 0.4s ease;
 }
 
 .device-icons span {
-    margin-left: 4px;
+    margin-left: 2px;
 }
 
 .device-app {
@@ -621,27 +667,28 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .app-avatar {
-    width: 64px;
-    height: 64px;
-    border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
-    margin-bottom: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+    margin-bottom: 6px;
+    border: 1px solid var(--glass-border);
 }
 
 .app-branding h3 {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     font-weight: 700;
-    color: #f8fafc;
-    margin-bottom: 4px;
+    color: var(--device-text);
+    margin-bottom: 2px;
+    transition: color 0.4s ease;
 }
 
 .app-badge {
-    background: rgba(59, 130, 246, 0.15);
+    background: rgba(59, 130, 246, 0.12);
     color: var(--primary);
-    padding: 3px 10px;
-    border-radius: 12px;
-    font-size: 0.65rem;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.6rem;
     font-weight: 700;
     letter-spacing: 0.5px;
     border: 1px solid rgba(59, 130, 246, 0.2);
@@ -652,12 +699,12 @@ img { max-width: 100%; height: auto; display: block; }
     flex-direction: column;
     align-items: center;
     position: relative;
-    margin: 20px 0;
+    margin: 10px 0;
 }
 
 .lock-shield {
-    width: 76px;
-    height: 76px;
+    width: 64px;
+    height: 64px;
     border-radius: 50%;
     background: rgba(239, 68, 68, 0.08);
     border: 2px solid #ef4444;
@@ -666,35 +713,35 @@ img { max-width: 100%; height: auto; display: block; }
     align-items: center;
     position: relative;
     z-index: 5;
-    box-shadow: 0 0 20px rgba(239, 68, 68, 0.2);
+    box-shadow: 0 0 15px rgba(239, 68, 68, 0.15);
 }
 
 .shield-svg {
-    width: 44px;
-    height: 44px;
+    width: 36px;
+    height: 36px;
     color: #ef4444;
     position: absolute;
     opacity: 0.15;
 }
 
 .shield-lock-state {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     z-index: 10;
 }
 
 .lock-status-text {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     font-weight: 800;
     color: #ef4444;
-    margin-top: 12px;
-    letter-spacing: 1.5px;
+    margin-top: 8px;
+    letter-spacing: 1.2px;
 }
 
 .pulse-ring {
     position: absolute;
-    top: -12px;
-    width: 100px;
-    height: 100px;
+    top: -10px;
+    width: 84px;
+    height: 84px;
     border-radius: 50%;
     border: 1px solid rgba(239, 68, 68, 0.3);
     animation: phonePulse 2.5s infinite ease-out;
@@ -710,26 +757,23 @@ img { max-width: 100%; height: auto; display: block; }
 
 .mock-device-info {
     width: 100%;
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: 16px;
-    padding: 12px 16px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: var(--device-info-bg);
+    border-radius: 12px;
+    padding: 8px 12px;
+    border: 1px solid var(--device-info-border);
+    transition: background-color 0.4s ease, border-color 0.4s ease;
 }
 
 .mock-info-row {
     display: flex;
     justify-content: space-between;
-    font-size: 0.75rem;
-    margin-bottom: 6px;
-}
-
-.mock-info-row:last-child {
-    margin-bottom: 0;
+    font-size: 0.7rem;
 }
 
 .mock-info-row span:first-child {
-    color: #475569;
+    color: var(--device-text-muted);
     font-weight: 500;
+    transition: color 0.4s ease;
 }
 
 .color-success {
@@ -742,18 +786,59 @@ img { max-width: 100%; height: auto; display: block; }
     font-weight: 600;
 }
 
+/* Locked Apps List at Bottom */
+.locked-apps-container {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.locked-title {
+    font-size: 0.55rem;
+    font-weight: 700;
+    color: var(--device-text-muted);
+    letter-spacing: 1.5px;
+    margin-bottom: 6px;
+    transition: color 0.4s ease;
+}
+
+.locked-apps-row {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.locked-app-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.mini-ig { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%); }
+.mini-yt { background: #ff0000; }
+.mini-ff { background: linear-gradient(135deg, #ff5722, #ff9800); }
+.mini-bgmi { background: linear-gradient(135deg, #2e7d32, #1b5e20); }
+
 .device-home-bar {
-    width: 80px;
+    width: 70px;
     height: 4px;
-    background: #1e293b;
+    background: var(--device-border);
     border-radius: 2px;
-    margin: 8px auto;
+    margin: 6px auto;
+    transition: background-color 0.4s ease;
 }
 
 /* Floating animation for device preview */
 @keyframes floatDevice {
     0% { transform: translateY(0); }
-    50% { transform: translateY(-12px); }
+    50% { transform: translateY(-10px); }
     100% { transform: translateY(0); }
 }
 

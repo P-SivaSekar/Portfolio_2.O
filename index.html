@@ -179,29 +179,29 @@
                             </div>
                             <h3 class="deck-title">ActivLock</h3>
                             <p class="deck-desc">
-                                ActivLock is a security-focused mobile application engineered to provide administrative device locking and access restrictions. By utilising deep system-level APIs, it allows administrators to lock and unlock key device functionalities dynamically and securely.
+                                ActivLock is a productivity and health-focused app locking tool designed to curb digital addiction. It locks selected apps and requires you to complete physical exercises like pushups, squats, or steps to unlock them. It features custom warning layers to discourage opening addictive apps, along with a limited emergency bypass.
                             </p>
                             
                             <div class="features-list">
                                 <div class="feature-item">
-                                    <span class="feature-icon">🛡️</span>
+                                    <span class="feature-icon">🏋️</span>
                                     <div>
-                                        <h4>Device Lockout System</h4>
-                                        <p>Enforce strict device lock state remotely or locally to prevent unauthorized access.</p>
+                                        <h4>Workout Lock Verification</h4>
+                                        <p>Require physical exercise (pushups, squats, or steps) to unlock locked applications and break unhealthy habits.</p>
                                     </div>
                                 </div>
                                 <div class="feature-item">
-                                    <span class="feature-icon">⚡</span>
+                                    <span class="feature-icon">🧩</span>
                                     <div>
-                                        <h4>Dual-Package Architecture</h4>
-                                        <p>Available as standard codebase and enhanced feature-rich versions.</p>
+                                        <h4>Confirmation Pattern Barrier</h4>
+                                        <p>An extra, mindful confirmation pattern layer to block automatic, impulsive opens of addictive apps.</p>
                                     </div>
                                 </div>
                                 <div class="feature-item">
-                                    <span class="feature-icon">🧬</span>
+                                    <span class="feature-icon">🚨</span>
                                     <div>
-                                        <h4>Biometric & PIN API</h4>
-                                        <p>Leverages native Android security credentials for tamper-proof protection.</p>
+                                        <h4>Limited Emergency Bypass</h4>
+                                        <p>Skip physical workouts a restricted number of times per day for critical or urgent situations.</p>
                                     </div>
                                 </div>
                             </div>
@@ -234,6 +234,11 @@
                                     </svg>
                                     <span>GitHub Repo</span>
                                 </a>
+                            </div>
+                            
+                            <!-- Note for features -->
+                            <div class="deck-note">
+                                *Note: Some advanced features (such as physical exercise detection and automated lock overlays) are exclusive to the Enhanced version.
                             </div>
                         </div>
                         
@@ -275,12 +280,35 @@
                                             
                                             <div class="mock-device-info">
                                                 <div class="mock-info-row">
-                                                    <span>Enforcer State</span>
-                                                    <span class="color-success">Enabled</span>
-                                                </div>
-                                                <div class="mock-info-row">
-                                                    <span>Tamper Alert</span>
+                                                    <span>Locked Application</span>
                                                     <span class="color-neutral">Active</span>
+                                                </div>
+                                            </div>
+
+                                            <!-- Locked Apps Icons Grid -->
+                                            <div class="locked-apps-container">
+                                                <span class="locked-title">LOCKED APPS</span>
+                                                <div class="locked-apps-row">
+                                                    <div class="locked-app-icon mini-ig" title="Instagram">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                                                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051C.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="locked-app-icon mini-yt" title="YouTube">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                                                            <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.508 9.388.508 9.388.508s7.517 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="locked-app-icon mini-ff" title="Free Fire">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                                                            <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 0 1-2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0zM12 15.414a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="locked-app-icon mini-bgmi" title="BGMI">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                                                            <path d="M21 11H3V9h18v2zm0 4H3v-2h18v2zm0-8H3V5h18v2z"/>
+                                                        </svg>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
