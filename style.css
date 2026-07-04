@@ -1009,3 +1009,8 @@ img { max-width: 100%; height: auto; display: block; }
 .feature-img:hover, .feature-img-small:hover {
     transform: scale(1.05);
 }
+
+@keyframes discSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
