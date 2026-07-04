@@ -346,17 +346,76 @@ img { max-width: 100%; height: auto; display: block; }
 .timeline-date { color: var(--primary); font-weight: 600; margin-bottom: 0.5rem; }
 
 /* Grid layout for Internships & Certifications */
-.grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
-.feature-card { overflow: hidden; display: flex; flex-direction: column; }
-.feature-card.horizontal { flex-direction: row; align-items: center; padding: 1rem; }
+.grid-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+.feature-card {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 1rem);
+    min-width: 350px;
+    max-width: 560px;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+.feature-card.horizontal {
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+    width: calc(33.333% - 1.34rem);
+    min-width: 350px;
+    max-width: 380px;
+}
+@media (max-width: 992px) {
+    .feature-card.horizontal {
+        width: calc(50% - 1rem);
+    }
+}
+@media (max-width: 768px) {
+    .feature-card,
+    .feature-card.horizontal {
+        width: 100%;
+        max-width: 100%;
+    }
+}
 .feature-img { width: 100%; height: 250px; object-fit: contain; background: rgba(255, 255, 255, 0.05); padding: 10px; border-bottom: 1px solid var(--glass-border); }
-.feature-img-small { width: 150px; height: 150px; object-fit: contain; background: rgba(255, 255, 255, 0.05); padding: 5px; border-radius: 12px; margin-right: 1.5rem; }
+.feature-img-small { width: 150px; height: 150px; object-fit: contain; background: rgba(255, 255, 255, 0.05); padding: 5px; border-radius: 12px; margin-right: 1.5rem; flex-shrink: 0; }
 .feature-info { padding: 1.5rem; flex: 1; }
 .subtitle { color: var(--secondary); font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; }
 
 /* Gallery / CTF / Achievements */
-.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-.gallery-item { position: relative; overflow: hidden; border-radius: 16px; aspect-ratio: 4/3; }
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    aspect-ratio: 4/3;
+    width: calc(33.333% - 1.34rem);
+    min-width: 300px;
+    max-width: 360px;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+@media (max-width: 992px) {
+    .gallery-item {
+        width: calc(50% - 1rem);
+    }
+}
+@media (max-width: 768px) {
+    .gallery-item {
+        width: 100%;
+        max-width: 100%;
+    }
+}
 .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
 .gallery-overlay {
     position: absolute;
