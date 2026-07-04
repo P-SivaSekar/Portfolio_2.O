@@ -121,7 +121,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
 p { line-height: 1.6; color: var(--text-muted); }
 a { text-decoration: none; color: inherit; }
 img { max-width: 100%; height: auto; display: block; }
-.section { padding: 50px 5%; max-width: 1400px; margin: 0 auto; }
+.section { padding: 50px 5%; max-width: 1400px; margin: 0 auto; scroll-margin-top: 80px; }
 .section-title { font-size: 2.5rem; margin-bottom: 3rem; text-align: center; }
 .section-title span { color: var(--primary); }
 .section-subtitle { text-align: center; margin-top: -2rem; margin-bottom: 3rem; font-size: 1.1rem; }
@@ -439,15 +439,9 @@ img { max-width: 100%; height: auto; display: block; }
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 50px 5%;
+    padding: 65px 5% 50px;
     box-sizing: border-box;
-}
-
-@media (min-width: 992px) {
-    #projects {
-        height: calc(100vh - 80px);
-        overflow: hidden;
-    }
+    scroll-margin-top: 80px;
 }
 
 .project-deck {
